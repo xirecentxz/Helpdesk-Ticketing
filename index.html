@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Helpdesk | 2026 Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>IT Helpdesk <span class="accent">Support</span></h1>
+            <p>Laporkan kendala IT Anda di sini.</p>
+        </header>
+
+        <form id="ticketForm">
+            <div class="input-group">
+                <label>Nama Pelapor</label>
+                <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="grid-inputs">
+                <div class="input-group">
+                    <label>Departemen</label>
+                    <select name="departemen" required>
+                        <option value="">Pilih Departemen</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                        <option value="Produksi">Produksi</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Kategori</label>
+                    <select name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                        <option value="Network">Network</option>
+                        <option value="Server">Server</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Prioritas</label>
+                <select name="prioritas" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                    <option value="Emergency">Emergency</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Subjek Masalah</label>
+                <input type="text" name="masalah" placeholder="Contoh: PC Blue Screen" required>
+            </div>
+
+            <div class="input-group">
+                <label>Deskripsi Kendala</label>
+                <textarea name="deskripsi" rows="4" placeholder="Jelaskan detail masalahnya..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="modern-btn">KIRIM TIKET</button>
+        </form>
+        <div id="responseMessage" class="status-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
